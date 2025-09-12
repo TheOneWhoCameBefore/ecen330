@@ -17,7 +17,7 @@ void plane_explode(void);
 // State machine tick function.
 void plane_tick(void);
 
-/******************** Plane Status Function ********************/
+/******************** Plane Status Functions ********************/
 
 // Return the current plane position through the pointers *x,*y.
 void plane_get_pos(coord_t *x, coord_t *y);
