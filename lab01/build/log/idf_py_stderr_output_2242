@@ -1,0 +1,12 @@
+Command: ninja all
+CMake Error at /opt/esp/idf/tools/cmake/build.cmake:375 (message):
+  Failed to resolve component 'hw' required by component 'lcd': unknown name.
+Call Stack (most recent call first):
+  /opt/esp/idf/tools/cmake/build.cmake:424 (__build_resolve_and_add_req)
+  /opt/esp/idf/tools/cmake/build.cmake:425 (__build_expand_requirements)
+  /opt/esp/idf/tools/cmake/build.cmake:748 (__build_expand_requirements)
+  /opt/esp/idf/tools/cmake/project.cmake:739 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

@@ -1,0 +1,27 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /project/lab02/build/bootloader && /opt/esp/python_env/idf6.0_py3.12_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /project/lab02/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj
+FAILED: esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj 
+ccache /opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v6.0-dev-2810-g800f141f94\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/project/lab02/build/config -I/project/components/pin -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/dma/include -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/port/esp32/. -I/opt/esp/idf/components/esp_hw_support/port/esp32/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32 -I/opt/esp/idf/components/soc/esp32/include -I/opt/esp/idf/components/soc/esp32/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32/include -I/opt/esp/idf/components/esp_rom/esp32/include/esp32 -I/opt/esp/idf/components/esp_rom/esp32 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/xtensa/esp32/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/driver/i2c/include -I/opt/esp/idf/components/driver/touch_sensor/include -I/opt/esp/idf/components/driver/twai/include -I/opt/esp/idf/components/driver/touch_sensor/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/include -I/opt/esp/idf/components/esp_driver_gpio/include -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -O2 -fmacro-prefix-map=/project/lab02=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -MD -MT esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj -MF esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj.d -o esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj -c /project/components/pin/pin.c
+/project/components/pin/pin.c: In function 'pin_get_level':
+/project/components/pin/pin.c:115:1: error: control reaches end of non-void function [-Werror=return-type]
+  115 | }
+      | ^
+/project/components/pin/pin.c: In function 'pin_get_in_reg':
+/project/components/pin/pin.c:122:1: error: control reaches end of non-void function [-Werror=return-type]
+  122 | }
+      | ^
+/project/components/pin/pin.c: In function 'pin_get_out_reg':
+/project/components/pin/pin.c:129:1: error: control reaches end of non-void function [-Werror=return-type]
+  129 | }
+      | ^
+/project/components/pin/pin.c: At top level:
+/project/components/pin/pin.c:26:22: error: 'PIN_MUX_REG_OFFSET' defined but not used [-Werror=unused-const-variable=]
+   26 | static const uint8_t PIN_MUX_REG_OFFSET[] = {
+      |                      ^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+ninja: build stopped: subcommand failed.

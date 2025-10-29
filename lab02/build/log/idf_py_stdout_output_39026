@@ -1,0 +1,186 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+-- Project sdkconfig file /project/lab02/sdkconfig
+Loading defaults file /project/lab02/sdkconfig.defaults...
+-- Compiler supported targets: xtensa-esp-elf
+-- App "lab02" version: 131cdc4-dirty
+-- USING O3
+-- Adding linker script /opt/esp/idf/components/esp_system/ld/esp32/memory.ld.in
+--   -> Preprocessing .in script: /opt/esp/idf/components/esp_system/ld/esp32/memory.ld.in
+-- Adding linker script /opt/esp/idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Preprocessing .in script: /opt/esp/idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Applying ldgen processing: /project/lab02/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.newlib-reent-funcs.ld
+-- Adding linker script /opt/esp/idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_update bootloader bootloader_support config cxx driver efuse esp_app_format esp_bootloader_format esp_common esp_driver_gpio esp_driver_spi esp_hal_i2c esp_hal_mspi esp_hal_timg esp_hw_support esp_libc esp_mm esp_partition esp_pm esp_ringbuf esp_rom esp_security esp_system esp_timer esp_usb_cdc_rom_console esptool_py freertos hal heap lcd log main mbedtls partition_table pin pthread soc spi_flash xtensa
+-- Component paths: /opt/esp/idf/components/app_update /opt/esp/idf/components/bootloader /opt/esp/idf/components/bootloader_support /project/components/config /opt/esp/idf/components/cxx /opt/esp/idf/components/driver /opt/esp/idf/components/efuse /opt/esp/idf/components/esp_app_format /opt/esp/idf/components/esp_bootloader_format /opt/esp/idf/components/esp_common /opt/esp/idf/components/esp_driver_gpio /opt/esp/idf/components/esp_driver_spi /opt/esp/idf/components/esp_hal_i2c /opt/esp/idf/components/esp_hal_mspi /opt/esp/idf/components/esp_hal_timg /opt/esp/idf/components/esp_hw_support /opt/esp/idf/components/esp_libc /opt/esp/idf/components/esp_mm /opt/esp/idf/components/esp_partition /opt/esp/idf/components/esp_pm /opt/esp/idf/components/esp_ringbuf /opt/esp/idf/components/esp_rom /opt/esp/idf/components/esp_security /opt/esp/idf/components/esp_system /opt/esp/idf/components/esp_timer /opt/esp/idf/components/esp_usb_cdc_rom_console /opt/esp/idf/components/esptool_py /opt/esp/idf/components/freertos /opt/esp/idf/components/hal /opt/esp/idf/components/heap /project/components/lcd /opt/esp/idf/components/log /project/lab02/main /opt/esp/idf/components/mbedtls /opt/esp/idf/components/partition_table /project/components/pin /opt/esp/idf/components/pthread /opt/esp/idf/components/soc /opt/esp/idf/components/spi_flash /opt/esp/idf/components/xtensa
+-- Configuring done (2.9s)
+-- Generating done (0.2s)
+-- Build files have been written to: /project/lab02/build
+[1/29] Linking C static library esp-idf/mbedtls/libmbedtls.a
+[2/29] Linking C static library esp-idf/esp_pm/libesp_pm.a
+[3/29] Linking C static library esp-idf/esp_driver_gpio/libesp_driver_gpio.a
+[4/29] Linking C static library esp-idf/esp_security/libesp_security.a
+[5/29] Performing build step for 'bootloader'
+[1/1] cd /project/lab02/build/bootloader && /opt/esp/python_env/idf6.0_py3.12_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /project/lab02/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[6/29] No install step for 'bootloader'
+[7/29] Linking C static library esp-idf/esp_timer/libesp_timer.a
+[8/29] Completed 'bootloader'
+[9/29] Linking C static library esp-idf/esp_hal_timg/libesp_hal_timg.a
+[10/29] Building C object esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj
+FAILED: esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj 
+ccache /opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v6.0-dev-2810-g800f141f94\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/project/lab02/build/config -I/project/components/pin -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/dma/include -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/port/esp32/. -I/opt/esp/idf/components/esp_hw_support/port/esp32/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32 -I/opt/esp/idf/components/soc/esp32/include -I/opt/esp/idf/components/soc/esp32/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32/include -I/opt/esp/idf/components/esp_rom/esp32/include/esp32 -I/opt/esp/idf/components/esp_rom/esp32 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/xtensa/esp32/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/driver/i2c/include -I/opt/esp/idf/components/driver/touch_sensor/include -I/opt/esp/idf/components/driver/twai/include -I/opt/esp/idf/components/driver/touch_sensor/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/include -I/opt/esp/idf/components/esp_driver_gpio/include -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -O2 -fmacro-prefix-map=/project/lab02=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -MD -MT esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj -MF esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj.d -o esp-idf/pin/CMakeFiles/__idf_pin.dir/pin.c.obj -c /project/components/pin/pin.c
+/project/components/pin/pin.c: In function 'pin_reset':
+/project/components/pin/pin.c:45:5: error: implicit declaration of function 'REG_WRITE'; did you mean 'REG_BITS'? [-Wimplicit-function-declaration]
+   45 |     REG_WRITE(GPIO_PIN0_REG + (pin * sizeof(uint32_t)), 0);
+      |     ^~~~~~~~~
+      |     REG_BITS
+/project/components/pin/pin.c:45:15: error: 'GPIO_PIN0_REG' undeclared (first use in this function); did you mean 'GPIO_PIN_REG_1'?
+   45 |     REG_WRITE(GPIO_PIN0_REG + (pin * sizeof(uint32_t)), 0);
+      |               ^~~~~~~~~~~~~
+      |               GPIO_PIN_REG_1
+/project/components/pin/pin.c:45:15: note: each undeclared identifier is reported only once for each function it appears in
+/project/components/pin/pin.c:48:15: error: 'GPIO_FUNC0_OUT_SEL_CFG_REG' undeclared (first use in this function)
+   48 |     REG_WRITE(GPIO_FUNC0_OUT_SEL_CFG_REG + (pin * sizeof(uint32_t)), 0x100);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:51:15: error: 'GPIO_PIN_MUX_REG' undeclared (first use in this function)
+   51 |     REG_WRITE(GPIO_PIN_MUX_REG[pin], 0x2900);
+      |               ^~~~~~~~~~~~~~~~
+/project/components/pin/pin.c: In function 'pin_pullup':
+/project/components/pin/pin.c:66:20: error: implicit declaration of function 'REG_READ' [-Wimplicit-function-declaration]
+   66 |     uint32_t val = REG_READ(GPIO_PIN_MUX_REG[pin]);
+      |                    ^~~~~~~~
+/project/components/pin/pin.c:66:29: error: 'GPIO_PIN_MUX_REG' undeclared (first use in this function)
+   66 |     uint32_t val = REG_READ(GPIO_PIN_MUX_REG[pin]);
+      |                             ^~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:66:14: warning: unused variable 'val' [-Wunused-variable]
+   66 |     uint32_t val = REG_READ(GPIO_PIN_MUX_REG[pin]);
+      |              ^~~
+/project/components/pin/pin.c: In function 'pin_pulldown':
+/project/components/pin/pin.c:80:29: error: 'GPIO_PIN_MUX_REG' undeclared (first use in this function)
+   80 |     if (enable) REG_SET_BIT(GPIO_PIN_MUX_REG[pin], FUN_WPD); else REG_CLR_BIT(GPIO_PIN_MUX_REG[pin], FUN_WPD);
+      |                             ^~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:80:17: note: in expansion of macro 'REG_SET_BIT'
+   80 |     if (enable) REG_SET_BIT(GPIO_PIN_MUX_REG[pin], FUN_WPD); else REG_CLR_BIT(GPIO_PIN_MUX_REG[pin], FUN_WPD);
+      |                 ^~~~~~~~~~~
+/project/components/pin/pin.c: In function 'pin_input':
+/project/components/pin/pin.c:88:29: error: 'GPIO_PIN_MUX_REG' undeclared (first use in this function)
+   88 |     if (enable) REG_SET_BIT(GPIO_PIN_MUX_REG[pin], 9); else REG_CLR_BIT(GPIO_PIN_MUX_REG[pin], 9);
+      |                             ^~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:88:17: note: in expansion of macro 'REG_SET_BIT'
+   88 |     if (enable) REG_SET_BIT(GPIO_PIN_MUX_REG[pin], 9); else REG_CLR_BIT(GPIO_PIN_MUX_REG[pin], 9);
+      |                 ^~~~~~~~~~~
+/project/components/pin/pin.c:86:29: error: parameter 'pin' set but not used [-Werror=unused-but-set-parameter]
+   86 | int32_t pin_input(pin_num_t pin, bool enable)
+      |                   ~~~~~~~~~~^~~
+/project/components/pin/pin.c: In function 'pin_output':
+/project/components/pin/pin.c:98:35: error: 'GPIO_ENABLE_REG' undeclared (first use in this function)
+   98 |         if (pin < 32) REG_SET_BIT(GPIO_ENABLE_REG, pin);
+      |                                   ^~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:98:23: note: in expansion of macro 'REG_SET_BIT'
+   98 |         if (pin < 32) REG_SET_BIT(GPIO_ENABLE_REG, pin);
+      |                       ^~~~~~~~~~~
+/project/components/pin/pin.c:99:26: error: 'GPIO_ENABLE1_REG' undeclared (first use in this function)
+   99 |         else REG_SET_BIT(GPIO_ENABLE1_REG, pin - 32);
+      |                          ^~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:99:14: note: in expansion of macro 'REG_SET_BIT'
+   99 |         else REG_SET_BIT(GPIO_ENABLE1_REG, pin - 32);
+      |              ^~~~~~~~~~~
+/project/components/pin/pin.c: In function 'pin_odrain':
+/project/components/pin/pin.c:112:29: error: 'GPIO_PIN0_REG' undeclared (first use in this function); did you mean 'GPIO_PIN_REG_1'?
+  112 |     if (enable) REG_SET_BIT(GPIO_PIN0_REG + (pin * sizeof(uint32_t)), 2);
+      |                             ^~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:112:17: note: in expansion of macro 'REG_SET_BIT'
+  112 |     if (enable) REG_SET_BIT(GPIO_PIN0_REG + (pin * sizeof(uint32_t)), 2);
+      |                 ^~~~~~~~~~~
+/project/components/pin/pin.c: In function 'pin_set_level':
+/project/components/pin/pin.c:122:32: error: 'GPIO_OUT_W1TS_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  122 |         if (level) REG_SET_BIT(GPIO_OUT_W1TS_REG, pin);
+      |                                ^~~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:122:20: note: in expansion of macro 'REG_SET_BIT'
+  122 |         if (level) REG_SET_BIT(GPIO_OUT_W1TS_REG, pin);
+      |                    ^~~~~~~~~~~
+/project/components/pin/pin.c:123:26: error: 'GPIO_OUT_W1TC_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  123 |         else REG_SET_BIT(GPIO_OUT_W1TC_REG, pin);
+      |                          ^~~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:123:14: note: in expansion of macro 'REG_SET_BIT'
+  123 |         else REG_SET_BIT(GPIO_OUT_W1TC_REG, pin);
+      |              ^~~~~~~~~~~
+/project/components/pin/pin.c:125:32: error: 'GPIO_OUT1_W1TS_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  125 |         if (level) REG_SET_BIT(GPIO_OUT1_W1TS_REG, pin - 32);
+      |                                ^~~~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:125:20: note: in expansion of macro 'REG_SET_BIT'
+  125 |         if (level) REG_SET_BIT(GPIO_OUT1_W1TS_REG, pin - 32);
+      |                    ^~~~~~~~~~~
+/project/components/pin/pin.c:126:26: error: 'GPIO_OUT1_W1TC_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  126 |         else REG_SET_BIT(GPIO_OUT1_W1TC_REG, pin - 32);
+      |                          ^~~~~~~~~~~~~~~~~~
+/project/components/pin/pin.c:16:40: note: in definition of macro 'REG'
+   16 | #define REG(r) (*(volatile uint32_t *)(r))
+      |                                        ^
+/project/components/pin/pin.c:126:14: note: in expansion of macro 'REG_SET_BIT'
+  126 |         else REG_SET_BIT(GPIO_OUT1_W1TC_REG, pin - 32);
+      |              ^~~~~~~~~~~
+/project/components/pin/pin.c: In function 'pin_get_in_reg':
+/project/components/pin/pin.c:143:29: error: 'GPIO_IN_REG' undeclared (first use in this function); did you mean 'GPIO_PIN_REG_1'?
+  143 |     uint64_t low = REG_READ(GPIO_IN_REG);
+      |                             ^~~~~~~~~~~
+      |                             GPIO_PIN_REG_1
+/project/components/pin/pin.c:144:30: error: 'GPIO_IN1_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  144 |     uint64_t high = REG_READ(GPIO_IN1_REG);
+      |                              ^~~~~~~~~~~~
+      |                              GPIO_OUT_REG
+/project/components/pin/pin.c: In function 'pin_get_out_reg':
+/project/components/pin/pin.c:153:30: error: 'GPIO_OUT1_REG' undeclared (first use in this function); did you mean 'GPIO_OUT_REG'?
+  153 |     uint64_t high = REG_READ(GPIO_OUT1_REG);
+      |                              ^~~~~~~~~~~~~
+      |                              GPIO_OUT_REG
+/project/components/pin/pin.c: At top level:
+/project/components/pin/pin.c:24:22: error: 'PIN_MUX_REG_OFFSET' defined but not used [-Werror=unused-const-variable=]
+   24 | static const uint8_t PIN_MUX_REG_OFFSET[] = {
+      |                      ^~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+[11/29] Linking C static library esp-idf/efuse/libefuse.a
+[12/29] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+ccache /opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v6.0-dev-2810-g800f141f94\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/project/lab02/build/config -I/project/lab02/main -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/dma/include -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/port/esp32/. -I/opt/esp/idf/components/esp_hw_support/port/esp32/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32 -I/opt/esp/idf/components/soc/esp32/include -I/opt/esp/idf/components/soc/esp32/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32/include -I/opt/esp/idf/components/esp_rom/esp32/include/esp32 -I/opt/esp/idf/components/esp_rom/esp32 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/xtensa/esp32/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/driver/i2c/include -I/opt/esp/idf/components/driver/touch_sensor/include -I/opt/esp/idf/components/driver/twai/include -I/opt/esp/idf/components/driver/touch_sensor/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/include -I/project/components/config -I/project/components/lcd -I/project/components/pin -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -O2 -fmacro-prefix-map=/project/lab02=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /project/lab02/main/main.c
+/project/lab02/main/main.c:8:10: fatal error: driver/gpio.h: No such file or directory
+    8 | #include "driver/gpio.h" // gpio_dump_io_configuration
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.

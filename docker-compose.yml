@@ -1,0 +1,11 @@
+services:
+  esp-idf:
+    image: espressif/idf:latest # Use the official pre-built image
+    volumes:
+      - ./:/project
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    stdin_open: true
+    tty: true
+    # This command automatically sets up the environment when the terminal opens
+    command: /bin/bash -c "source /opt/esp/idf/export.sh && /bin/bash"

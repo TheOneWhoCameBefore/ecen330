@@ -1,0 +1,33 @@
+Command: ninja all
+[1/24] Linking C static library esp-idf/app_update/libapp_update.a
+[2/24] Linking C static library esp-idf/esp_bootloader_format/libesp_bootloader_format.a
+[3/24] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[4/24] Linking C static library esp-idf/esp_hal_mspi/libesp_hal_mspi.a
+[5/24] Linking C static library esp-idf/xtensa/libxtensa.a
+[6/24] Performing build step for 'bootloader'
+[1/1] cd /project/lab04/build/bootloader && /opt/esp/python_env/idf6.0_py3.12_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /project/lab04/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[7/24] No install step for 'bootloader'
+[8/24] Linking C static library esp-idf/c24k_8b/libc24k_8b.a
+[9/24] Linking C static library esp-idf/esp_ringbuf/libesp_ringbuf.a
+[10/24] Linking C static library esp-idf/esp_driver_i2s/libesp_driver_i2s.a
+[11/24] Completed 'bootloader'
+[12/24] Linking C static library esp-idf/esp_driver_spi/libesp_driver_spi.a
+[13/24] Linking C static library esp-idf/esp_adc/libesp_adc.a
+[14/24] Linking C static library esp-idf/driver/libdriver.a
+[15/24] Linking C static library esp-idf/pin/libpin.a
+[16/24] Linking C static library esp-idf/lcd/liblcd.a
+[17/24] Building C object esp-idf/joy/CMakeFiles/__idf_joy.dir/joy.c.obj
+[18/24] Linking C static library esp-idf/joy/libjoy.a
+[19/24] Linking C static library esp-idf/main/libmain.a
+[20/24] Generating esp-idf/esp_system/ld/sections.ld
+[21/24] Building C object CMakeFiles/lab04.elf.dir/project_elf_src_esp32.c.obj
+[22/24] Linking CXX executable lab04.elf
+[23/24] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated /project/lab04/build/lab04.bin
+[24/24] cd /project/lab04/build && /opt/esp/python_env/idf6.0_py3.12_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /project/lab04/build/partition_table/partition-table.bin /project/lab04/build/lab04.bin
+lab04.bin binary size 0x2c9d0 bytes. Smallest app partition is 0x100000 bytes. 0xd3630 bytes (83%) free.

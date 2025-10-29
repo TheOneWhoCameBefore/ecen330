@@ -1,0 +1,11 @@
+{
+	"name": "ECEN330 Dev Container",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "esp-idf",
+	"workspaceFolder": "/project",
+	"remoteUser": "root",
+
+	// This command runs ONCE when the container is first created.
+	// It adds the setup command to the shell's startup file.
+	"postCreateCommand": "echo 'source /opt/esp/idf/export.sh' >> ~/.bashrc"
+}

@@ -1,10 +1,6 @@
 set(SOURCE main.c game.c board.c graphics.c nav.c)
-if(EXISTS ../main/com.c)
-    set(MILESTONE 2)
-    list(APPEND SOURCE com.c)
-else()
-    set(MILESTONE 1)
-endif()
+set(MILESTONE 2)
+list(APPEND SOURCE com.c)
 message(STATUS "MILESTONE=${MILESTONE}")
 idf_component_register(SRCS ${SOURCE}
                        INCLUDE_DIRS .

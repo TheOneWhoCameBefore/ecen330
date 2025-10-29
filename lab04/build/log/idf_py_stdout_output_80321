@@ -1,0 +1,46 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- MILESTONE=2
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+-- Project sdkconfig file /project/lab04/sdkconfig
+Loading defaults file /project/lab04/sdkconfig.defaults...
+-- Compiler supported targets: xtensa-esp-elf
+-- App "lab04" version: 131cdc4-dirty
+-- USING O3
+-- Adding linker script /opt/esp/idf/components/esp_system/ld/esp32/memory.ld.in
+--   -> Preprocessing .in script: /opt/esp/idf/components/esp_system/ld/esp32/memory.ld.in
+-- Adding linker script /opt/esp/idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Preprocessing .in script: /opt/esp/idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Applying ldgen processing: /project/lab04/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /opt/esp/idf/components/esp_rom/esp32/ld/esp32.rom.newlib-reent-funcs.ld
+-- Adding linker script /opt/esp/idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- MILESTONE=2
+-- Components: app_update bootloader bootloader_support c24k_8b config cxx driver efuse esp_adc esp_app_format esp_bootloader_format esp_common esp_driver_gpio esp_driver_i2s esp_driver_spi esp_hal_i2c esp_hal_mspi esp_hal_timg esp_hw_support esp_libc esp_mm esp_partition esp_pm esp_ringbuf esp_rom esp_security esp_system esp_timer esp_usb_cdc_rom_console esptool_py freertos hal heap joy lcd log main mbedtls partition_table pin pthread soc sound spi_flash tone xtensa
+-- Component paths: /opt/esp/idf/components/app_update /opt/esp/idf/components/bootloader /opt/esp/idf/components/bootloader_support /project/lab04/components/c24k_8b /project/components/config /opt/esp/idf/components/cxx /opt/esp/idf/components/driver /opt/esp/idf/components/efuse /opt/esp/idf/components/esp_adc /opt/esp/idf/components/esp_app_format /opt/esp/idf/components/esp_bootloader_format /opt/esp/idf/components/esp_common /opt/esp/idf/components/esp_driver_gpio /opt/esp/idf/components/esp_driver_i2s /opt/esp/idf/components/esp_driver_spi /opt/esp/idf/components/esp_hal_i2c /opt/esp/idf/components/esp_hal_mspi /opt/esp/idf/components/esp_hal_timg /opt/esp/idf/components/esp_hw_support /opt/esp/idf/components/esp_libc /opt/esp/idf/components/esp_mm /opt/esp/idf/components/esp_partition /opt/esp/idf/components/esp_pm /opt/esp/idf/components/esp_ringbuf /opt/esp/idf/components/esp_rom /opt/esp/idf/components/esp_security /opt/esp/idf/components/esp_system /opt/esp/idf/components/esp_timer /opt/esp/idf/components/esp_usb_cdc_rom_console /opt/esp/idf/components/esptool_py /opt/esp/idf/components/freertos /opt/esp/idf/components/hal /opt/esp/idf/components/heap /project/components/joy /project/components/lcd /opt/esp/idf/components/log /project/lab04/main /opt/esp/idf/components/mbedtls /opt/esp/idf/components/partition_table /project/components/pin /opt/esp/idf/components/pthread /opt/esp/idf/components/soc /project/components/sound /opt/esp/idf/components/spi_flash /project/components/tone /opt/esp/idf/components/xtensa
+-- Configuring done (2.5s)
+-- Generating done (0.2s)
+-- Build files have been written to: /project/lab04/build
+[1/14] Building C object esp-idf/tone/CMakeFiles/__idf_tone.dir/tone.c.obj
+[2/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/14] Performing build step for 'bootloader'
+[1/1] cd /project/lab04/build/bootloader && /opt/esp/python_env/idf6.0_py3.12_env/bin/python /opt/esp/idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /project/lab04/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[4/14] No install step for 'bootloader'
+[5/14] Completed 'bootloader'
+[6/14] Building C object esp-idf/sound/CMakeFiles/__idf_sound.dir/sound_one.c.obj
+FAILED: esp-idf/sound/CMakeFiles/__idf_sound.dir/sound_one.c.obj 
+ccache /opt/esp/tools/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v6.0-dev-2810-g800f141f94\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/project/lab04/build/config -I/project/components/sound -I/opt/esp/idf/components/esp_libc/platform_include -I/opt/esp/idf/components/freertos/config/include -I/opt/esp/idf/components/freertos/config/include/freertos -I/opt/esp/idf/components/freertos/config/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/opt/esp/idf/components/freertos/esp_additions/include -I/opt/esp/idf/components/esp_hw_support/include -I/opt/esp/idf/components/esp_hw_support/include/soc -I/opt/esp/idf/components/esp_hw_support/dma/include -I/opt/esp/idf/components/esp_hw_support/ldo/include -I/opt/esp/idf/components/esp_hw_support/debug_probe/include -I/opt/esp/idf/components/esp_hw_support/etm/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/include -I/opt/esp/idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/opt/esp/idf/components/esp_hw_support/power_supply/include -I/opt/esp/idf/components/esp_hw_support/modem/include -I/opt/esp/idf/components/esp_hw_support/port/esp32/. -I/opt/esp/idf/components/esp_hw_support/port/esp32/include -I/opt/esp/idf/components/heap/include -I/opt/esp/idf/components/heap/tlsf -I/opt/esp/idf/components/log/include -I/opt/esp/idf/components/soc/include -I/opt/esp/idf/components/soc/esp32 -I/opt/esp/idf/components/soc/esp32/include -I/opt/esp/idf/components/soc/esp32/register -I/opt/esp/idf/components/hal/platform_port/include -I/opt/esp/idf/components/hal/esp32/include -I/opt/esp/idf/components/hal/include -I/opt/esp/idf/components/esp_rom/include -I/opt/esp/idf/components/esp_rom/esp32/include -I/opt/esp/idf/components/esp_rom/esp32/include/esp32 -I/opt/esp/idf/components/esp_rom/esp32 -I/opt/esp/idf/components/esp_common/include -I/opt/esp/idf/components/esp_system/include -I/opt/esp/idf/components/esp_system/port/soc -I/opt/esp/idf/components/esp_system/port/include/private -I/opt/esp/idf/components/xtensa/esp32/include -I/opt/esp/idf/components/xtensa/include -I/opt/esp/idf/components/xtensa/deprecated_include -I/opt/esp/idf/components/driver/i2c/include -I/opt/esp/idf/components/driver/touch_sensor/include -I/opt/esp/idf/components/driver/twai/include -I/opt/esp/idf/components/driver/touch_sensor/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/esp32/include -I/opt/esp/idf/components/esp_hal_i2c/include -I/opt/esp/idf/components/esp_driver_gpio/include -I/project/components/config -mlongcalls -Wno-frame-address -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -O2 -fmacro-prefix-map=/project/lab04=. -fmacro-prefix-map=/opt/esp/idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -DEXTERN_BUF=1 -MD -MT esp-idf/sound/CMakeFiles/__idf_sound.dir/sound_one.c.obj -MF esp-idf/sound/CMakeFiles/__idf_sound.dir/sound_one.c.obj.d -o esp-idf/sound/CMakeFiles/__idf_sound.dir/sound_one.c.obj -c /project/components/sound/sound_one.c
+/project/components/sound/sound_one.c:11:10: fatal error: driver/gptimer.h: No such file or directory
+   11 | #include "driver/gptimer.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
